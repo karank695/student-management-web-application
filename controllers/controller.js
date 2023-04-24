@@ -86,8 +86,8 @@ module.exports.createSession = (req, res) => {
 }
 //function to signOut
 module.exports.signOut = (req, res) => {
-    req.logOut(function (err) {
-        console.log(err);
-    });
+    req.session.destroy(function (err) {
+        if (err) throw err;
+    })
     res.redirect('/login');
 }
