@@ -34,7 +34,6 @@ module.exports.add = (req, res) => {
                     employee_password: req.body.password,
                     employee_name: req.body.fname,
                 }).then((data) => {
-                    console.log(data);
                     req.flash('success', 'registered successfully');
                     res.redirect('/login');
                 }).catch((err) => {

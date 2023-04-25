@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const path = require('path');
 const port = process.env.PORT;
 const ejs = require('ejs');
@@ -11,8 +12,6 @@ const cm = require('./config/cusMiddleware');
 const passport = require('passport');
 const LocalStrategy = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
-const dotenv = require('dotenv');
-
 //requiring ejs module layouts
 var expressLayouts = require('express-ejs-layouts');
 app.use(express.static('assets'));
