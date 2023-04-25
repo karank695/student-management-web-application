@@ -42,10 +42,11 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         maxAge: (1000 * 60 * 100)
-    },
-    store: MongoStore.create({
-        mongoUrl: process.env.MONGO_URI
-    })
+    }
+    // ,
+    // store: MongoStore.create({
+    //     mongoUrl: "mongodb+srv://krn0869:karan0869@cluster0.pmwmctd.mongodb.net/?retryWrites=true&w=majority"
+    // })
 }));
 app.use(flash());
 app.use(cm.setFlash);
