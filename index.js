@@ -5,6 +5,7 @@ const path = require('path');
 const port = process.env.PORT;
 const ejs = require('ejs');
 const mongoose = require('mongoose');
+const MongoDB = require('mongodb');
 // const db = require('./config/mongoose_conn');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -43,7 +44,7 @@ app.use(session({
         maxAge: (1000 * 60 * 100)
     },
     store: MongoStore.create({
-        mongoUrl: 'mongodb://localhost:27017/employee_db'
+        mongoUrl: process.env.MONGO_URI
     })
 }));
 app.use(flash());
