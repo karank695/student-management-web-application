@@ -35,7 +35,10 @@ body {
     .container {
         width: 100%;
         background-color: rgba(105, 171, 171, 0.8);
-        color: rgb(0, 0, 0)
+        color: rgb(0, 0, 0);
+        font-size:16px;
+        
+        
     }
 }
 
@@ -47,7 +50,7 @@ body {
 
 .container table {
     width: 100%;
-    border-spacing: 60px 20px;
+    border-spacing: 20px 20px;
 }
 
 .container #cname {
@@ -103,7 +106,7 @@ body {
 @media (max-width:600px) {
     #interview-list {
         width: 100%;
-        overflow-x: hidden;
+        overflow-x: auto;
         margin-bottom: 40px;
     }
 }
