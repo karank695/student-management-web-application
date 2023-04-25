@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = 8000;
+const port = process.env.PORT;
 const ejs = require('ejs');
 const db = require('./config/mongoose_conn');
 const session = require('express-session');
@@ -11,6 +11,7 @@ const cm = require('./config/cusMiddleware');
 const passport = require('passport');
 const LocalStrategy = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
+const dotenv = require('dotenv');
 
 //requiring ejs module layouts
 var expressLayouts = require('express-ejs-layouts');
